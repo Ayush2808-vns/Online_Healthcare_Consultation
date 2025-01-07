@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings - Healthcare</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+    <div class="navbar">
+        <h1>Healthcare Consultation</h1>
+        <nav>
+            <ul>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="consultations.html">Consultations</a></li>
+                <li><a href="settings.html">Settings</a></li>
+                <li><a href="logout.html">Logout</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <section class="settings">
+        <h2>User Settings</h2>
+        
+        <h3>Change Password</h3>
+        <form action="change-password.php" method="POST">
+            <label for="current-password">Current Password:</label>
+            <input type="password" id="current-password" name="current-password" required>
+            <label for="new-password">New Password:</label>
+            <input type="password" id="new-password" name="new-password" required>
+            <label for="confirm-password">Confirm Password:</label>
+            <input type="password" id="confirm-password" name="confirm-password" required>
+            <button type="submit">Change Password</button>
+        </form>
+
+        <h3>Notification Preferences</h3>
+        <form action="update-preferences.php" method="POST">
+            <label for="email-notifications">Email Notifications:</label>
+            <input type="checkbox" id="email-notifications" name="email-notifications">
+            
+            <label for="sms-notifications">SMS Notifications:</label>
+            <input type="checkbox" id="sms-notifications" name="sms-notifications">
+            
+            <button type="submit">Update Preferences</button>
+        </form>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2025 Healthcare Consultation</p>
+</footer>
+
+</body>
+</html>
